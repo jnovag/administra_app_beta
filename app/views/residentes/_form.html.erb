@@ -1,0 +1,41 @@
+<%= form_for(@residente) do |f| %>
+  <% if @residente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@residente.errors.count, "error") %> prohibited this residente from being saved:</h2>
+
+      <ul>
+      <% @residente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_nacimiento %><br>
+    <%= f.date_select :fecha_nacimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :identificacion %><br>
+    <%= f.text_field :identificacion %>
+  </div>
+  <div class="field">
+    <%= f.label :apartamento_id %><br>
+    <%= f.collection_select :apartamento_id, Apartamento.all, :id, :numero  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
