@@ -16,8 +16,18 @@
 </p>
 
 <p>
+  <strong>Area:</strong>
+  <%= @apartamento.area %>
+</p>
+
+<p>
   <strong>Nro habitantes:</strong>
   <%= @apartamento.nro_habitantes %>
+</p>
+
+<p>
+  <strong>Valor administración:</strong>
+  <%= @apartamento.valor_administracion %>
 </p>
 
 <%= link_to 'Edit', edit_apartamento_path(@apartamento) %> |

@@ -8,7 +8,9 @@
       <th>Numero</th>
       <th>Torre</th>
       <th>Piso</th>
+      <th>Area</th>
       <th>Nro habitantes</th>
+      <th>Valor Administración</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +21,9 @@
         <td><%= apartamento.numero %></td>
         <td><%= apartamento.torre %></td>
         <td><%= apartamento.piso %></td>
+        <td><%= apartamento.area %></td>
         <td><%= apartamento.nro_habitantes %></td>
+        <td><%= apartamento.valor_administracion %></td>
         <td><%= link_to 'Show', apartamento %></td>
         <td><%= link_to 'Edit', edit_apartamento_path(apartamento) %></td>
         <td><%= link_to 'Destroy', apartamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>

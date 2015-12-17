@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'apartamentos#index'
+
   resources :vehiculos
   resources :residentes
   resources :apartamentos
