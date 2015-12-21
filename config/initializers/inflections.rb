@@ -19,4 +19,5 @@
    inflect.irregular 'residente', 'residentes'
    inflect.irregular 'apartamento', 'apartamentos'
    inflect.irregular 'vehiculo', 'vehiculos'
+   inflect.irregular 'error', 'errores'
  end

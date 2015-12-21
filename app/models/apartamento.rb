@@ -5,6 +5,7 @@ class Apartamento < ActiveRecord::Base
 	validates :numero, presence: true
 	validates :torre, presence: true
 	validates :piso, presence: true
+	validates :area, numericality: { greater_than: 0 } 
 
 	def valor_administracion
 		area * 2300

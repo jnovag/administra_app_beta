@@ -10,6 +10,7 @@
       <th>Piso</th>
       <th>Area</th>
       <th>Nro habitantes</th>
+      <th>Nro vehículos</th>
       <th>Valor Administración</th>
       <th colspan="3"></th>
     </tr>
@@ -22,7 +23,8 @@
         <td><%= apartamento.torre %></td>
         <td><%= apartamento.piso %></td>
         <td><%= apartamento.area %></td>
-        <td><%= apartamento.nro_habitantes %></td>
+        <td><%= apartamento.residentes.count %></td>
+        <td><%= apartamento.vehiculos.count %></td>
         <td><%= apartamento.valor_administracion %></td>
         <td><%= link_to 'Show', apartamento %></td>
         <td><%= link_to 'Edit', edit_apartamento_path(apartamento) %></td>
