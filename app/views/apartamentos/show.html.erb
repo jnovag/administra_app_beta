@@ -22,7 +22,12 @@
 
 <p>
   <strong>Nro habitantes:</strong>
-  <%= @apartamento.nro_habitantes %>
+  <%= @apartamento.residentes.count %>
+</p>
+
+<p>
+  <strong>Nro vehículos:</strong>
+  <%= @apartamento.vehiculos.count %>
 </p>
 
 <p>
