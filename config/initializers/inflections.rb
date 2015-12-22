@@ -21,4 +21,5 @@
    inflect.irregular 'vehiculo', 'vehiculos'
    inflect.irregular 'error', 'errores'
    inflect.irregular 'usuario', 'usuarios'
+   inflect.irregular 'sesion', 'sesiones'
  end

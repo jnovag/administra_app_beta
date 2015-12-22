@@ -1,4 +1,5 @@
 class ApartamentosController < ApplicationController
+  before_action :authenticate
   before_action :set_apartamento, only: [:show, :edit, :update, :destroy]
 
   # GET /apartamentos

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
   resources :usuarios
   root 'apartamentos#index'
 
+  resources :sesiones
   resources :vehiculos
   resources :residentes
   resources :apartamentos

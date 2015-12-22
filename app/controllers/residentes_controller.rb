@@ -1,4 +1,5 @@
 class ResidentesController < ApplicationController
+  before_action :authenticate
   before_action :set_residente, only: [:show, :edit, :update, :destroy]
 
   # GET /residentes
