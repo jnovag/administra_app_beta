@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def logged_in?
-  	cookies[:user_id]
+  	cookies[:user_id] && current_user
   end
 
   def current_user
@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-  	unless logged_in? && current_user
+  	unless logged_in?
   		flash[:error] = 'Debe iniciar sesión'
-  		redirect_to '/sesiones/new' 
+  		redirect_to new_sesion_path 
   	end
   end
 end

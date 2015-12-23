@@ -13,6 +13,11 @@ class SesionesController < ApplicationController
   	end
   end
 
+  def destroy
+  	cookies[:user_id] = nil
+  	redirect_to root_path
+  end
+
   private
   def sesion_params
   	params.require(:sesion).permit(:mail, :clave)
