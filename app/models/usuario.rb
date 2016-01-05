@@ -8,7 +8,7 @@ class Usuario < ActiveRecord::Base
 	has_secure_password
 
 	after_update :send_updated_mail
-	after_created :send_created_mail
+	after_create :send_created_mail
 
 
 	def send_created_mail
