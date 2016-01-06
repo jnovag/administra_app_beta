@@ -7,20 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="menu">
+		<%= link_to 'Residentes', residentes_path %> |
+		<%= link_to 'Apartamentos', apartamentos_path %> |
+		<%= link_to 'Vehículos', vehiculos_path %> |
+		<%= link_to 'Usuarios', usuarios_path %> |
+		<% if @current_user  %>
+		    Hola <%= @current_user.nombre %> |
+			<%= link_to 'Salir', sesion_path(0), method: :delete %> 
+		<% else %>
+			<%= link_to 'Ingresar', new_sesion_path  %>
+		<% end %> 
+	</div>
 
-<%= link_to 'Residentes', residentes_path %> |
-<%= link_to 'Apartamentos', apartamentos_path %> |
-<%= link_to 'Vehículos', vehiculos_path %> |
-<%= link_to 'Usuarios', usuarios_path %> |
-<% if @current_user  %>
-    Hola <%= @current_user.nombre %> |
-	<%= link_to 'Salir', sesion_path(0), method: :delete %> 
-<% else %>
-	<%= link_to 'Ingresar', new_sesion_path  %>
-<% end %> 
+	 <div class="content">
+		<%= yield %> 	
+	 </div>
 
- 
-<%= yield %>
 
 </body>
 </html>
