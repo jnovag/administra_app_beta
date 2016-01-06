@@ -77,8 +77,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'localhost:3000'}
   config.action_mailer.smtp_settings = {
     address: 'smtp.mandrillapp.com',
     port: 587,
@@ -88,4 +86,5 @@ Rails.application.configure do
     authenticate: 'login',
     host: 'localhost:3000' 
   }
+  config.action_mailer.default_url_options = { host: 'http://admnistraapp.herokuapp.com'}
 end
