@@ -3,10 +3,15 @@
 <%= flash[:error] %>
 
 <%= form_for :sesion, url: '/sesiones' do |f| %>
+<div class="form-group">
 	<%=  f.label :mail %>
-	<%=  f.text_field :mail %>
-	<%=  f.label :clave %>
-	<%=  f.password_field :clave %>
+	<%=  f.text_field :mail, class: 'form-control' %>
+</div>
 
-	<%=  f.submit %>
+<div class="form-group">
+	<%=  f.label :clave %>
+	<%=  f.password_field :clave, class: 'form-control' %>
+</div>
+
+	<%=  f.submit 'Iniciar', class: 'btn btn-success' %>
 <% end %>

@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :numero %><br>
-    <%= f.text_field :numero %>
+    <%= f.text_field :numero, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :torre %><br>
-    <%= f.text_field :torre %>
+    <%= f.text_field :torre, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :piso %><br>
-    <%= f.number_field :piso %>
+    <%= f.number_field :piso, class: 'form-control'%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :area %><br>
-    <%= f.number_field :area %>
+    <%= f.number_field :area, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Guardar', class: 'btn btn' %>
   </div>
 <% end %>

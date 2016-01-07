@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :placa %><br>
-    <%= f.text_field :placa %>
+    <%= f.text_field :placa , class: 'form-control'%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :marca %><br>
-    <%= f.text_field :marca %>
+    <%= f.text_field :marca , class: 'form-control'%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :color %><br>
-    <%= f.text_field :color %>
+    <%= f.text_field :color, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :descripcion %><br>
-    <%= f.text_area :descripcion %>
+    <%= f.text_area :descripcion, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :apartamento_id %><br>
     <%= f.collection_select :apartamento_id, Apartamento.all, :id, :numero  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Guardar', class: 'btn btn'%>
   </div>
 <% end %>

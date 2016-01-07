@@ -7,18 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="menu">
-		<%= link_to 'Residentes', residentes_path %> |
-		<%= link_to 'Apartamentos', apartamentos_path %> |
-		<%= link_to 'Vehículos', vehiculos_path %> |
-		<%= link_to 'Usuarios', usuarios_path %> |
-		<% if @current_user  %>
-		    Hola <%= @current_user.nombre %> |
-			<%= link_to 'Salir', sesion_path(0), method: :delete %> 
-		<% else %>
-			<%= link_to 'Ingresar', new_sesion_path  %>
-		<% end %> 
+
+
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href= "/">
+				AdministraApp
+			</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><%= link_to 'Residentes', residentes_path %></li>
+			<li><%= link_to 'Apartamentos', apartamentos_path %></li>
+			<li><%= link_to 'Vehículos', vehiculos_path %> </li>
+			<li><%= link_to 'Usuarios', usuarios_path %></li>
+			<li>
+				<% if @current_user  %>
+					<%= link_to 'Salir', sesion_path(0), method: :delete %> 
+				<% else %>
+					<%= link_to 'Ingresar', new_sesion_path  %>
+				<% end %> 
+				
+			</li>
+		</ul>	
 	</div>
+</nav>
+
 
 	 <div class="content">
 		<%= yield %> 	

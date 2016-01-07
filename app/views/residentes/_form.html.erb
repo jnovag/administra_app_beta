@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :apellido %><br>
-    <%= f.text_field :apellido %>
+    <%= f.text_field :apellido, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
+    <%= f.text_field :telefono, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :fecha_nacimiento %><br>
-    <%= f.date_select :fecha_nacimiento %>
+    <%= f.date_select :fecha_nacimiento , class: 'form-control'%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :identificacion %><br>
-    <%= f.text_field :identificacion %>
+    <%= f.text_field :identificacion, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :apartamento_id %><br>
     <%= f.collection_select :apartamento_id, Apartamento.all, :id, :numero  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit'Guardar', class: 'btn btn' %>
   </div>
 <% end %>
