@@ -1,4 +1,5 @@
 class Apartamento < ActiveRecord::Base
+	include Export
 	has_many :vehiculos
 	has_many :residentes
 
@@ -10,4 +11,9 @@ class Apartamento < ActiveRecord::Base
 	def valor_administracion
 		area * 2300
 	end
+
+	def self.methods_to_export
+		super + ['valor_administracion']
+	end
+
 end

@@ -1,4 +1,5 @@
 class Usuario < ActiveRecord::Base
+	include Export
 	validates :nombre, presence: true
 	validates :apellido, presence: true
 	validates :login, presence: true, uniqueness: true

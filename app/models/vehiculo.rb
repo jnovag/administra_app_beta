@@ -1,4 +1,5 @@
 class Vehiculo < ActiveRecord::Base
+	include Export
   belongs_to :apartamento
 
   validates :placa, presence: true, uniqueness: true

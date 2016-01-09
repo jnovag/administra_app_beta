@@ -6,6 +6,11 @@ class VehiculosController < ApplicationController
   # GET /vehiculos.json
   def index
     @vehiculos = Vehiculo.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data Vehiculo.to_csv }
+      format.json
+    end
   end
 
   # GET /vehiculos/1

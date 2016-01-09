@@ -1,4 +1,5 @@
 class Residente < ActiveRecord::Base
+	include Export
   belongs_to :apartamento
 
   after_create :incrementar_residente
@@ -11,4 +12,6 @@ class Residente < ActiveRecord::Base
   	apartamento.nro_habitantes += 1
   	apartamento.save
   end
+
+
 end

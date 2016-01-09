@@ -6,6 +6,11 @@ class UsuariosController < ApplicationController
   # GET /usuarios.json
   def index
     @usuarios = Usuario.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data Usuario.to_csv }
+      format.json
+    end
   end
 
   # GET /usuarios/1

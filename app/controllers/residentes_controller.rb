@@ -6,6 +6,11 @@ class ResidentesController < ApplicationController
   # GET /residentes.json
   def index
     @residentes = Residente.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data Residente.to_csv }
+      format.json
+    end
   end
 
   # GET /residentes/1

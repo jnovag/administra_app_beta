@@ -15,3 +15,12 @@
 //= require turbolinks
 //= arequiere bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+	$('#apartamento_numero').keyup(function(){
+		var value;
+		value = Number.parseInt($('#apartamento_numero').val());
+		$('#apartamento_torre').val(value * 2);
+	});	
+});
+
